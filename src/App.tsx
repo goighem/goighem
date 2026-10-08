@@ -43,9 +43,9 @@ function App() {
 
   return (
     <div className="site-shell">
-      {!loaded && <div className="loader"><img className="loader-logo" src="/logo-goi-ghem.png" alt="" /><span>Gói một chút Hà Nội</span></div>}
+      {!loaded && <div className="loader"><img className="loader-logo" src={`${import.meta.env.BASE_URL}logo-goi-ghem.png`} alt="" /><span>Gói một chút Hà Nội</span></div>}
       <header className="nav">
-        <a className="brand" href="#top" aria-label="GÓI GHÉM về đầu trang"><img src="/logo-goi-ghem.png" alt="GÓI GHÉM" /></a>
+        <a className="brand" href="#top" aria-label="GÓI GHÉM về đầu trang"><img src={`${import.meta.env.BASE_URL}logo-goi-ghem.png`} alt="GÓI GHÉM" /></a>
         <nav className={menuOpen ? 'nav-links open' : 'nav-links'} aria-label="Điều hướng chính">
           <a href="#box-story" onClick={() => setMenuOpen(false)}>The box</a>
           <a href="#banh-com" onClick={() => setMenuOpen(false)}>Bánh cốm</a>
@@ -89,7 +89,7 @@ function App() {
                 <div className="cake-slide-window">
                   <div className="cake-slide" key={giftCakes[activeCake].name} style={{ '--slide-direction': cakeDirection } as React.CSSProperties}>
                     <div className="cake-index">0{activeCake + 1}<small>/03</small></div>
-                    <div className={`cake-hero-visual cake-${activeCake}`} style={{ background: giftCakes[activeCake].tone }}><img src={giftCakes[activeCake].image} alt={giftCakes[activeCake].name} /></div>
+                    <div className={`cake-hero-visual cake-${activeCake}`} style={{ background: giftCakes[activeCake].tone }}><img src={`${import.meta.env.BASE_URL}${giftCakes[activeCake].image}`} alt={giftCakes[activeCake].name} /></div>
                     <div className="cake-copy"><span className="cake-kicker">MỘT MÓN QUÀ NHỎ</span><strong>{giftCakes[activeCake].name}</strong><small>{giftCakes[activeCake].description}</small><em>{giftCakes[activeCake].detail}</em></div>
                   </div>
                 </div>
@@ -107,7 +107,7 @@ function App() {
         </section>
 
         {storyChapters.map((chapter, index) => <section className={`story-chapter ${index % 2 ? 'dark' : ''}`} id={chapter.id} key={chapter.id} ref={(el) => { storyRefs.current[index + 2] = el; }}>
-          <div className="story-chapter-inner"><div className="story-chapter-art"><span>0{index + 2}</span><div className="story-orbit"><i /></div><img src={chapter.image} alt={chapter.title} /></div><article className="story-article"><p className="eyebrow">{chapter.number} / {chapter.subtitle}</p><h2>{chapter.intro}</h2>{chapter.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}{chapter.tip && <p className="story-tip">{chapter.tip}</p>}</article></div>
+          <div className="story-chapter-inner"><div className="story-chapter-art"><span>0{index + 2}</span><div className="story-orbit"><i /></div><img src={`${import.meta.env.BASE_URL}${chapter.image}`} alt={chapter.title} /></div><article className="story-article"><p className="eyebrow">{chapter.number} / {chapter.subtitle}</p><h2>{chapter.intro}</h2>{chapter.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}{chapter.tip && <p className="story-tip">{chapter.tip}</p>}</article></div>
         </section>)}
 
         <section className="collection dark" id="facts" ref={(el) => { storyRefs.current[6] = el; }}>

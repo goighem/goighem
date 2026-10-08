@@ -7,7 +7,7 @@ type Cake = { tone: string; accent: string; image: string };
 
 function CakeInside({ cake, index, count, isOpen }: { cake: Cake; index: number; count: number; isOpen: boolean }) {
   const group = useRef<THREE.Group>(null);
-  const imageTexture = useTexture(cake.image);
+  const imageTexture = useTexture(`${import.meta.env.BASE_URL}${cake.image}`);
   useFrame((_, delta) => {
     if (!group.current) return;
     group.current.rotation.y += delta * (0.16 + index * 0.02);
