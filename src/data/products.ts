@@ -44,7 +44,8 @@ export const storyChapters = [
       'Bánh cốm is traditionally part of Hanoi weddings. Packed in a red box, it is said to be like a red thread tying the couple together, with a wish for a happy life until old age. In the 1940s, writer Thạch Lam described it as an autumn wedding cake exchanged between families.'
     ],
     tip: 'Taste tip: take a small bite, then a sip of tea, and notice the soft, grassy sweetness of the rice.',
-    image: 'banh-com.png'
+    image: 'banh-com.png',
+    packageImage: 'banh-com-packshot.jpg'
   },
   {
     id: 'banh-xu-xe',
@@ -72,7 +73,8 @@ export const storyChapters = [
       'One old Hàng Đường family recalls that around 1930 apricots from the Hương Pagoda area flooded the street for only about a month, so they were packed in salt jars and later refined with sugar and ginger. This account comes from one family’s memory, so we share it as a story rather than a proven origin.',
       'Ô mai has long been part of the tray offered to guests at Tet. Try it with plain green tea.'
     ],
-    image: 'omai.png'
+    image: 'omai.png',
+    packageImage: 'omai-packshot.jpg'
   },
   {
     id: 'non-la',
@@ -85,7 +87,7 @@ export const storyChapters = [
       'A local saying goes “if you want a good hat, go to Chuông village”. The village craft is more than 300 years old, according to the Hanoi cultural authority, and the hats were once made for different people: three-tier hats for young women, tall conical hats for men.'
     ],
     tip: 'Use it: hang it on a tree, a bag or a shelf, a small reminder of the trip.',
-    image: 'non-la.jpg'
+    image: 'non-la.png'
   }
 ];
 

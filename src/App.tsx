@@ -107,7 +107,7 @@ function App() {
         </section>
 
         {storyChapters.map((chapter, index) => <section className={`story-chapter ${index % 2 ? 'dark' : ''}`} id={chapter.id} key={chapter.id} ref={(el) => { storyRefs.current[index + 2] = el; }}>
-          <div className="story-chapter-inner"><div className="story-chapter-art"><span>0{index + 2}</span><div className="story-orbit"><i /></div><img src={`${import.meta.env.BASE_URL}${chapter.image}`} alt={chapter.title} /></div><article className="story-article"><p className="eyebrow">{chapter.number} / {chapter.subtitle}</p><h2>{chapter.intro}</h2>{chapter.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}{chapter.tip && <p className="story-tip">{chapter.tip}</p>}</article></div>
+          <div className="story-chapter-inner"><div className="story-chapter-art"><span>0{index + 2}</span><div className="story-orbit"><i /></div><img src={`${import.meta.env.BASE_URL}${chapter.image}`} alt={chapter.title} /></div><article className="story-article"><p className="eyebrow">{chapter.number} / {chapter.subtitle}</p><h2>{chapter.intro}</h2>{chapter.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}{chapter.tip && <p className="story-tip">{chapter.tip}</p>}{'packageImage' in chapter && chapter.packageImage && <figure className="story-package-shot"><img src={`${import.meta.env.BASE_URL}${chapter.packageImage}`} alt={`${chapter.title} trong hộp sản phẩm Gói Ghém`} /><figcaption><span>PACKED WITH CARE</span><span>GÓI GHÉM · HANOI</span></figcaption></figure>}</article></div>
         </section>)}
 
         <section className="collection dark" id="facts" ref={(el) => { storyRefs.current[6] = el; }}>
